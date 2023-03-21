@@ -10,9 +10,9 @@ message LoginRequest {
     string Password = 2;
 }
 message LoginResponse {
-    int64 Id = 1;
+    int64  Id = 1;
     string Name = 2;
-    int64 Gender = 3;
+    int64  Gender = 3;
     string Mobile = 4;
 }
 // 用户登录
@@ -20,14 +20,14 @@ message LoginResponse {
 // 用户注册
 message RegisterRequest {
     string Name = 1;
-    int64 Gender = 2;
+    int64  Gender = 2;
     string Mobile = 3;
     string Password = 4;
 }
 message RegisterResponse {
-    int64 Id = 1;
+    int64  Id = 1;
     string Name = 2;
-    int64 Gender = 3;
+    int64  Gender = 3;
     string Mobile = 4;
 }
 // 用户注册
@@ -37,9 +37,9 @@ message UserInfoRequest {
     int64 Id = 1;
 }
 message UserInfoResponse {
-    int64 Id = 1;
+    int64  Id = 1;
     string Name = 2;
-    int64 Gender = 3;
+    int64  Gender = 3;
     string Mobile = 4;
 }
 // 用户信息

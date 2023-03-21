@@ -22,12 +22,22 @@ api （比 swagger 直观，就差测试）
 rpc
 
 
+# 模板生成命令（微服务项目布局）
+~/user$ goctl model mysql ddl -src ./model/user.sql -dir ./model -c --style=go_zero
+~/user$ goctl api go -api ./api/user.api -dir ./api --style=go_zero
+~/user$ goctl rpc protoc -src ./rpc/user.proto --go_out=. --go-grpc_out=. --zrpc_out=. --style=go_zero
 
 
-# 模板生成命令
-~/user$ goctl model mysql ddl -src ./model/user.sql -dir ./model -c
-~/user$ goctl api go -api ./api/user.api -dir ./api
+接下来：
 
+  修改配置文件
+  填充依赖
+  编写业务代码
+
+# 启动（在 golang 容器中）
+~$ go run user.go -f ./etc/user.yaml
+
+# 测试
 
 
 # api 服务
@@ -58,7 +68,7 @@ rpc
 
 # go-zero 杀手锏 - goctl 
 
-1. 生成业务代码
+1. 生成业务代码（单体项目布局）
   $ goctl api go -api *.api -dir ../  --style=go_zero
   $ goctl rpc protoc *.proto --go_out=../ --go-grpc_out=../  --zrpc_out=../ --style=go_zero
 

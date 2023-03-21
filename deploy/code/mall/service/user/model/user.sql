@@ -1,7 +1,7 @@
 
-CREATE DATABASE IF NOT EXISTS `easy-demo` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+CREATE DATABASE IF NOT EXISTS `mall` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
 
-USE `easy-demo`;
+USE `mall`;
 
 DROP TABLE IF EXISTS `user`;
 

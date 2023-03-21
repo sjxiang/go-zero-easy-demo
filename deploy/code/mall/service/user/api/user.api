@@ -53,11 +53,11 @@ type (
 service User {
 	@doc "用户登录"
 	@handler Login
-	post /user/login(LoginRequest) returns (LoginResponse)
+	post /user/login (LoginRequest) returns (LoginResponse)
 	
 	@doc "用户注册"
 	@handler Register
-	post /user/register(RegisterRequest) returns (RegisterResponse)
+	post /user/register (RegisterRequest) returns (RegisterResponse)
 }
 
 @server(
